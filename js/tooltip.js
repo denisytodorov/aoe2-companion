@@ -170,18 +170,20 @@ function positionTooltip(tooltip, e) {
 }
 
 function cleanHelpText(text) {
-  // Remove HTML tags and clean up the help text for display
-  let clean = text
-    .replace(/<br\s*\/?>\s*\n?/g, ' ')
-    .replace(/<\/?[^>]+>/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+  // Split on <br> first - the first line is typically "Research/Create X (cost)",
+  // and subsequent lines contain the actual description.
+  let parts = text.split(/<br\s*\/?>\s*\n?/);
 
-  // Remove the "Create X (cost)" or "Research X (cost)" prefix line
-  // and the stat placeholder tags like ‹hp› ‹attack› etc.
-  clean = clean
-    .replace(/^(Create|Build|Research|Train)\s+[^.]+\.\s*/, '')
-    .replace(/[‹›]\w+[‹›]/g, '')
+  // Drop the leading "Create/Build/Research/Train X (cost)" line if present
+  let firstPlain = parts[0].replace(/<\/?[^>]+>/g, '').trim();
+  if (/^(Create|Build|Research|Train)\s/i.test(firstPlain) && parts.length > 1) {
+    parts = parts.slice(1);
+  }
+
+  let clean = parts.join(' ')
+    .replace(/<\/?[^>]+>/g, '')       // remove remaining HTML tags
+    .replace(/[‹›]\w+[‹›]?/g, '')    // remove stat placeholders like ‹hp› ‹attack›
+    .replace(/‹\w+›/g, '')           // catch any remaining ‹markers›
     .replace(/\s+/g, ' ')
     .trim();
 
