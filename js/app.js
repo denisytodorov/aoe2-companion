@@ -13,13 +13,9 @@ const App = {
 };
 
 // === Data Loading ===
-async function loadData() {
-  const [dataResp, stringsResp] = await Promise.all([
-    fetch('data/data.json'),
-    fetch('data/strings.json'),
-  ]);
-  App.data = await dataResp.json();
-  App.strings = await stringsResp.json();
+function loadData() {
+  App.data = AOE2_DATA;
+  App.strings = AOE2_STRINGS;
 
   // Build lookup maps
   const d = App.data.data;
@@ -117,10 +113,10 @@ function showTechTree(civName) {
 }
 
 // === Init ===
-async function init() {
+function init() {
   document.getElementById('civ-info').innerHTML = '<div class="loading">Loading game data...</div>';
 
-  await loadData();
+  loadData();
   populateDropdown();
 
   document.getElementById('civ-info').innerHTML =
