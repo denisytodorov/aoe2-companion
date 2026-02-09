@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AoE2 Companion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">AoE2 Companion</h1>
+    <div class="civ-selector">
+      <label for="civ-dropdown">Civilization</label>
+      <select id="civ-dropdown">
+        <option value="">Loading...</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="civ-page" class="view active">
+      <div id="civ-info"></div>
+      <button id="view-techtree-btn" class="btn" style="display:none;">View Tech Tree</button>
+      <div id="civ-strategy"></div>
+    </div>
+
+    <div id="techtree-page" class="view">
+      <div class="techtree-header">
+        <button id="back-to-civ-btn" class="btn">Back</button>
+        <h2 id="techtree-title"></h2>
+      </div>
+      <div id="techtree-container"></div>
+    </div>
+  </main>
+
+  <div id="tooltip" class="tooltip" style="display:none;"></div>
+
+  <script src="js/strategies.js"></script>
+  <script src="js/civPage.js"></script>
+  <script src="js/techTreeLayout.js"></script>
+  <script src="js/techTree.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
