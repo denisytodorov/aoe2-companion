@@ -9,11 +9,14 @@
 <body>
   <header>
     <h1 class="logo">AoE2 Companion</h1>
-    <div class="civ-selector">
-      <label for="civ-dropdown">Civilization</label>
-      <select id="civ-dropdown">
-        <option value="">Loading...</option>
-      </select>
+    <div class="header-nav">
+      <div class="civ-selector">
+        <label for="civ-dropdown">Civilization</label>
+        <select id="civ-dropdown">
+          <option value="">Loading...</option>
+        </select>
+      </div>
+      <button id="build-orders-btn" class="btn header-btn">Build Orders</button>
     </div>
   </header>
 
@@ -31,6 +34,10 @@
       </div>
       <div id="techtree-container"></div>
     </div>
+
+    <div id="buildorders-page" class="view">
+      <div id="buildorders-container"></div>
+    </div>
   </main>
 
   <div id="tooltip" class="tooltip" style="display:none;"></div>
@@ -38,6 +45,7 @@
   <script src="data/data.js"></script>
   <script src="data/strings.js"></script>
   <script src="js/strategies.js"></script>
+  <script src="js/buildOrders.js"></script>
   <script src="js/civPage.js"></script>
   <script src="js/techTreeLayout.js"></script>
   <script src="js/techTree.js"></script>

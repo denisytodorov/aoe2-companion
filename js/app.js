@@ -112,6 +112,11 @@ function showTechTree(civName) {
   renderTechTree(civName);
 }
 
+function showBuildOrders() {
+  showView('buildorders-page');
+  renderBuildOrdersPage();
+}
+
 // === Init ===
 function init() {
   document.getElementById('civ-info').innerHTML = '<div class="loading">Loading game data...</div>';
@@ -130,6 +135,11 @@ function init() {
   // Back button
   document.getElementById('back-to-civ-btn').addEventListener('click', () => {
     if (App.currentCiv) showCivPage(App.currentCiv);
+  });
+
+  // Build Orders button
+  document.getElementById('build-orders-btn').addEventListener('click', () => {
+    showBuildOrders();
   });
 }
 

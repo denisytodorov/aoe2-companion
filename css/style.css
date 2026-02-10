@@ -413,6 +413,333 @@ main {
   padding-top: 0.4rem;
 }
 
+/* === Header Nav === */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-btn {
+  background: var(--accent-secondary);
+  border-color: var(--accent);
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+}
+.header-btn:hover {
+  background: var(--accent);
+}
+
+/* === Build Orders Page === */
+.bo-page-header {
+  margin-bottom: 1.2rem;
+}
+
+.bo-page-header h2 {
+  color: var(--text-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.bo-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Card Grid */
+.bo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.bo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.bo-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--text-heading);
+}
+
+.bo-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.bo-card-name {
+  color: var(--text-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bo-card-summary {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+}
+
+.bo-card-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+}
+
+.bo-card-stat-sep::after {
+  content: "\00b7";
+  color: var(--text-secondary);
+}
+
+/* Difficulty Badges */
+.bo-difficulty {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.bo-difficulty-beginner {
+  background: #2a4a2a;
+  color: #6abf69;
+}
+.bo-difficulty-intermediate {
+  background: #4a3a1a;
+  color: var(--text-heading);
+}
+.bo-difficulty-advanced {
+  background: #4a1a1a;
+  color: var(--accent);
+}
+
+/* Detail View */
+.bo-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bo-detail-header h2 {
+  color: var(--text-heading);
+  font-size: 1.3rem;
+}
+
+.bo-back-btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.8rem;
+}
+
+.bo-detail-summary {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.bo-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+/* Resource Distribution */
+.bo-resource-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.bo-resource-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.3rem 0;
+  flex-wrap: wrap;
+}
+
+.bo-resource-label {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  min-width: 120px;
+}
+
+.bo-resource-chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.bo-res-chip {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.bo-res-food {
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--food);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.bo-res-wood {
+  background: rgba(160, 82, 45, 0.15);
+  color: var(--wood);
+  border: 1px solid rgba(160, 82, 45, 0.3);
+}
+
+.bo-res-gold {
+  background: rgba(241, 196, 15, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+/* Steps Section */
+.bo-steps-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.bo-steps-section h3,
+.bo-benchmarks-section h3,
+.bo-followup-section h3 {
+  color: var(--text-heading);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bo-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.bo-step {
+  display: grid;
+  grid-template-columns: 3.5rem 4rem 1fr;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 3px;
+  align-items: baseline;
+}
+
+.bo-step:nth-child(odd):not(.bo-step-helper):not(.bo-step-benchmark) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.bo-step-benchmark {
+  border-left: 3px solid var(--text-heading);
+  background: var(--bg-card);
+  font-weight: 700;
+}
+
+.bo-step-helper {
+  grid-template-columns: 1fr;
+  padding-left: 8.5rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.82rem;
+}
+
+.bo-step-pop {
+  color: var(--text-secondary);
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+
+.bo-step-age {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bo-age-dark {
+  color: var(--text-secondary);
+}
+
+.bo-age-feudal {
+  color: #5b9bd5;
+}
+
+.bo-age-castle {
+  color: var(--text-heading);
+}
+
+.bo-age-imperial {
+  color: var(--accent);
+}
+
+.bo-step-task {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* Benchmarks */
+.bo-benchmarks-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.bo-benchmarks-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bo-benchmarks-list li {
+  padding: 0.25rem 0 0.25rem 1rem;
+  position: relative;
+  line-height: 1.5;
+  font-size: 0.88rem;
+}
+
+.bo-benchmarks-list li::before {
+  content: "\25B8";
+  color: var(--text-heading);
+  position: absolute;
+  left: 0;
+}
+
+/* Follow-up */
+.bo-followup-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.bo-followup-section p {
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
 /* === Loading State === */
 .loading {
   text-align: center;
