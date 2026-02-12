@@ -9,7 +9,7 @@ const BUILD_ORDERS = [
     clickUpTime: "~8:30",
     steps: [
       { pop: "1-6",  age: "dark",   task: "6 villagers to sheep" },
-      { type: "helper", task: "Build 2 Houses with 2 of your starting villagers" },
+      { type: "helper", task: "Build 2 Houses with your 3 starting villagers (2/1)" },
       { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)" },
       { pop: "11",   age: "dark",   task: "Lure 1st boar" },
       { type: "helper", task: "Build House" },
@@ -19,7 +19,7 @@ const BUILD_ORDERS = [
       { type: "helper", task: "Build House" },
       { pop: "17-20", age: "dark",  task: "4 villagers to wood (2nd Lumber Camp or join 1st)" },
       { pop: "21",   age: "dark",   task: "Click Feudal Age", isBenchmark: true },
-      { type: "helper", task: "While advancing: move 4 shepherd villagers to wood" },
+      { type: "helper", task: "While advancing: move 4 shepherd villagers to wood; Build Barracks " },
       { pop: null,   age: "feudal", task: "Build Stable immediately, research Double-Bit Axe" },
       { pop: null,   age: "feudal", task: "Produce 3-5 Scouts, take map control" },
       { pop: null,   age: "feudal", task: "Start building farms as berries run out (~8 farms)" },
@@ -32,7 +32,7 @@ const BUILD_ORDERS = [
     },
     vilRebalanced: {
       label: "After rebalancing",
-      food: 8, foodNote: "farms",
+      food: 11, foodNote: "farms",
       wood: 10, woodNote: "",
       gold: 0, goldNote: "",
     },
@@ -77,9 +77,9 @@ const BUILD_ORDERS = [
     },
     vilRebalanced: {
       label: "After rebalancing",
-      food: 8, foodNote: "farms",
+      food: 7, foodNote: "mix",
       wood: 10, woodNote: "",
-      gold: 4, goldNote: "",
+      gold: 3, goldNote: "",
     },
     benchmarks: [
       "Feudal at 22 pop (~9:00)",
@@ -124,9 +124,9 @@ const BUILD_ORDERS = [
     },
     vilRebalanced: {
       label: "After rebalancing",
-      food: 8, foodNote: "farms",
+      food: 7, foodNote: "mix",
       wood: 10, woodNote: "",
-      gold: 4, goldNote: "",
+      gold: 3, goldNote: "",
     },
     benchmarks: [
       "Barracks down by ~7:00",
@@ -171,9 +171,9 @@ const BUILD_ORDERS = [
     },
     vilRebalanced: {
       label: "After rebalancing",
-      food: 10, foodNote: "depends on follow-up",
-      wood: 8, woodNote: "",
-      gold: 2, goldNote: "add more for Archers",
+      food: 10, foodNote: "sheep",
+      wood: 10, woodNote: "",
+      gold: 5, goldNote: "",
     },
     benchmarks: [
       "Barracks down by ~6:30",
