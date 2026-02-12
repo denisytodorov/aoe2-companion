@@ -1,0 +1,69 @@
+Build Order ID,Pop,Age,Task,Type
+scout-rush,1-6,dark,6 villagers to sheep,
+scout-rush,,,Build 2 Houses with 2 of your starting villagers,helper
+scout-rush,7-10,dark,4 villagers to wood (build Lumber Camp),
+scout-rush,11,dark,Lure 1st boar,
+scout-rush,,,Build House,helper
+scout-rush,12-13,dark,2 villagers to berries (build Mill),
+scout-rush,14,dark,Lure 2nd boar,
+scout-rush,15-16,dark,2 more villagers to berries (4 total on berries),
+scout-rush,,,Build House,helper
+scout-rush,17-20,dark,4 villagers to wood (2nd Lumber Camp or join 1st),
+scout-rush,21,dark,Click Feudal Age,benchmark
+scout-rush,,,While advancing: move 4 shepherd villagers to wood,helper
+scout-rush,,feudal,"Build Stable immediately, research Double-Bit Axe",
+scout-rush,,feudal,"Produce 3-5 Scouts, take map control",
+scout-rush,,feudal,Start building farms as berries run out (~8 farms),
+archer-rush,1-6,dark,6 villagers to sheep,
+archer-rush,,,Build 2 Houses with 2 of your starting villagers,helper
+archer-rush,7-10,dark,4 villagers to wood (build Lumber Camp),
+archer-rush,11,dark,Lure 1st boar,
+archer-rush,,,Build House,helper
+archer-rush,12,dark,1 villager to berries (build Mill),
+archer-rush,13,dark,Lure 2nd boar,
+archer-rush,14-16,dark,3 more villagers to berries (4 total on berries),
+archer-rush,,,Build House,helper
+archer-rush,17,dark,1 villager to wood (5 on wood total),
+archer-rush,18-21,dark,4 villagers to gold (build Mining Camp),
+archer-rush,22,dark,Click Feudal Age,benchmark
+archer-rush,,,While advancing: move shepherd villagers to wood (need ~10 on wood),helper
+archer-rush,,feudal,"Build Archery Range + 2nd Lumber Camp, research Double-Bit Axe",
+archer-rush,,feudal,"Produce Archers non-stop, research Fletching when affordable",
+archer-rush,,feudal,Start seeding farms as natural food runs out,
+archer-rush,,feudal,Build 2nd Archery Range when wood allows,
+men-at-arms,1-6,dark,6 villagers to sheep,
+men-at-arms,,,Build 2 Houses with 2 of your starting villagers,helper
+men-at-arms,7-10,dark,4 villagers to wood (build Lumber Camp),
+men-at-arms,11,dark,Lure 1st boar,
+men-at-arms,,,Build House,helper
+men-at-arms,12-13,dark,2 villagers to berries (build Mill),
+men-at-arms,14,dark,Lure 2nd boar,
+men-at-arms,15-16,dark,2 more villagers to berries (4 total on berries),
+men-at-arms,17,dark,"Build Barracks with a shepherd, then send to wood",
+men-at-arms,,,Build House,helper
+men-at-arms,18-19,dark,2 villagers to gold (build Mining Camp),
+men-at-arms,,,Queue 3 Militia from Barracks,helper
+men-at-arms,20-21,dark,2 villagers to wood,
+men-at-arms,22,dark,Click Feudal Age,benchmark
+men-at-arms,,,"While advancing: move shepherd villagers to wood, rally Militia toward enemy",helper
+men-at-arms,,feudal,"Research Men-at-Arms immediately, send Militia forward",
+men-at-arms,,feudal,"Build Archery Range, start Archer production",
+men-at-arms,,feudal,Seed farms as natural food runs out,
+drush,1-6,dark,6 villagers to sheep,
+drush,,,Build 2 Houses with 2 of your starting villagers,helper
+drush,7-10,dark,4 villagers to wood (build Lumber Camp),
+drush,11,dark,Lure 1st boar,
+drush,,,Build House,helper
+drush,12-13,dark,2 villagers to berries (build Mill),
+drush,14,dark,Lure 2nd boar,
+drush,15-16,dark,2 more villagers to berries (4 total on berries),
+drush,17,dark,"Build Barracks with a shepherd, then send to gold",
+drush,,,Build House,helper
+drush,18-19,dark,2 villagers to gold (build Mining Camp),
+drush,,,"Produce 3 Militia and send them to enemy base",helper
+drush,20-21,dark,2 villagers to farms (seed farms as sheep/boar deplete),
+drush,22-23,dark,2 villagers to wood,
+drush,24-25,dark,2 villagers to food (farms or berries),
+drush,25,dark,Click Feudal Age,benchmark
+drush,,,"While advancing: balance eco, wall up at home",helper
+drush,,feudal,"Flexible: Archery Range for Archers, or continue to Castle Age",

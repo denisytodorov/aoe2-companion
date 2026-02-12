@@ -1,6 +1,7 @@
 // === Strategy Data ===
 // Source: YouTube video on ideal strategies for every AoE2 civilization
 // Covers opening (Dark/Feudal Age) through Castle Age for 1v1 Arabia
+// Ideal compositions sourced from Google Sheets
 
 const STRATEGIES = {
   "Armenians": {
@@ -10,7 +11,8 @@ const STRATEGIES = {
       "Dark Age Spears give early pressure before Scouts even arrive",
       "Relic control with Warrior Priests is your primary Castle Age objective",
       "Fortified Churches are the key power spike — rush to them"
-    ]
+    ],
+    idealComp: "Coming soon"
   },
   "Aztecs": {
     opening: "Eagle Warrior + one Archery Range. Go Eagles + Skirmishers vs. Archer civs, or Eagles + Archers vs. other civs.",
@@ -19,7 +21,8 @@ const STRATEGIES = {
       "Infantry-heavy play is the way to go",
       "Eagle + Monk is the best Castle Age composition for Aztecs by far",
       "Mix Eagles with the correct Range unit depending on what you face"
-    ]
+    ],
+    idealComp: "Eagle Warrior + Skirmisher + Monk + Trebuchet"
   },
   "Bengalis": {
     opening: "Scout Rush or Archer Rush. Avoid infantry — you want to make use of the extra 2 Villagers you get in Feudal Age with a fast Feudal into a solid opening.",
@@ -29,7 +32,8 @@ const STRATEGIES = {
       "Don't make Knights in Castle Age — use Light Cav or Monks instead",
       "No Thumb Ring, but Archers into Crossbow still works well",
       "Monks are essential with Bengalis"
-    ]
+    ],
+    idealComp: "Ratha + Halberdier/Skirmisher/Light Cav + Elephants/Trebuchet"
   },
   "Berbers": {
     opening: "Scout Rush. This gives you the best flexibility to transition into Camel Archer, Genitour, or Stable units (Knights, Camels, Light Cav).",
@@ -38,7 +42,8 @@ const STRATEGIES = {
       "Berbers don't get many Feudal Age bonuses — play passively",
       "You really pop off from Castle Age onwards",
       "Camel Archer is your best unit — get to it through the Stable opening"
-    ]
+    ],
+    idealComp: "Camel Archer + Hussar + Bombard Cannon/Trebuchet"
   },
   "Bohemians": {
     opening: "Archers and Spears. Play a passive Feudal Age and aim to reach Castle Age as fast as possible.",
@@ -47,7 +52,8 @@ const STRATEGIES = {
       "Passive Feudal is ideal — your civ comes online in Castle Age",
       "Free mining techs give you a smooth economy",
       "Hand Cannoneers in Castle Age is probably the best strategy"
-    ]
+    ],
+    idealComp: "Halberdier + Houfnice + Arbalester"
   },
   "Britons": {
     opening: "One-range Archer opening. Play a relatively passive Feudal Age. Sometimes mix in Militia or Scouts, but Archers are the priority.",
@@ -56,7 +62,8 @@ const STRATEGIES = {
       "Archers as much as possible is the ideal strategy",
       "Goal is to reach Castle Age where your range bonus and cheaper TCs kick in",
       "Simple, effective gameplan — don't overcomplicate it"
-    ]
+    ],
+    idealComp: "Longbowman/Arbalester + Halberdier + Trebuchet"
   },
   "Bulgarians": {
     opening: "Men-at-Arms rush. Free Men-at-Arms upgrade makes this very effective. Follow up with a quick Range + Blacksmith or Stable for continued pressure.",
@@ -66,7 +73,8 @@ const STRATEGIES = {
       "Lots of army in Feudal Age is the way to go",
       "Map control is crucial for setting up forward Kreposts",
       "Keep the game messy and aggressive"
-    ]
+    ],
+    idealComp: "Hussar + Siege Onager/Ram + Halberdier"
   },
   "Burgundians": {
     opening: "The 'nothing' opening. Go up to Feudal and wall up with maybe a Stable or a couple Spears. Play as defensive as possible — pick up Bow Saw and Heavy Plow.",
@@ -76,7 +84,8 @@ const STRATEGIES = {
       "Picking up Relics is the #1 gameplan",
       "Once you get Relics, the game becomes very easy to win",
       "Early eco tech advantage compounds over time"
-    ]
+    ],
+    idealComp: "Coustillier + Hand Cannoneer + Bombard Cannon/Trebuchet (+Flemish Rev if 140+ vills)"
   },
   "Burmese": {
     opening: "Two Militia Feudal drush (Dark Age rush). Takes advantage of +1 attack in Feudal and the strong economy without over-investing like Men-at-Arms would.",
@@ -85,7 +94,8 @@ const STRATEGIES = {
       "+1 attack makes Militia surprisingly effective in Dark/Feudal",
       "Two Militia drush is less investment than Men-at-Arms",
       "Lets you transition smoothly into Range or Stable play"
-    ]
+    ],
+    idealComp: "Halberdier + Arambai + Monk + Bombard Cannon/Trebuchet"
   },
   "Byzantines": {
     opening: "Skirmisher + Spearman rush. These are your discounted counter units — lean into them.",
@@ -94,7 +104,8 @@ const STRATEGIES = {
       "Discounted counter units are your bread and butter",
       "Develop economy behind cheap Skirm/Spear pressure",
       "Goal is to reach Imperial Age where Byzantines are very strong"
-    ]
+    ],
+    idealComp: "Halberdier + Skirmisher + Monk + Bombard Cannon/Trebuchet + Cataphract/Heavy Camel/Hand Cannoneer (depending on enemy)"
   },
   "Celts": {
     opening: "Two Militia Feudal drush, then transition to Ranges. Being on Ranges (Archers or Skirms) is the best way to take advantage of the wood bonus.",
@@ -104,7 +115,8 @@ const STRATEGIES = {
       "Two Militia drush is less investment than Men-at-Arms",
       "Range play naturally transitions into strong Siege in Castle Age",
       "If going Knights, commit to an all-in since you lack Bloodlines"
-    ]
+    ],
+    idealComp: "Halberdier + Siege Onager + Siege Ram + Trebuchet"
   },
   "Chinese": {
     opening: "Scout Rush. Most flexible and versatile opening. Survive the early Feudal Age and let your extra Villagers pay off — you'll be ahead by default.",
@@ -113,7 +125,8 @@ const STRATEGIES = {
       "Scouts is the most versatile strategy, perfect for Chinese",
       "Just survive early Feudal and your extra Vills do the rest",
       "Flexibility is the Chinese strength — adapt to your opponent"
-    ]
+    ],
+    idealComp: "Chu Ko Nu/Arbalester + Light Cav + Trebuchet"
   },
   "Cumans": {
     opening: "Second Town Center in Feudal Age. If you can do this uncontested, you will almost certainly win. Sometimes you need Archers, a Stable, or Spears to survive.",
@@ -123,7 +136,8 @@ const STRATEGIES = {
       "As long as you survive and stabilize on 2 TCs, you'll be fine",
       "Do whatever is needed to defend the 2 TC play",
       "If uncontested, it's basically a guaranteed win"
-    ]
+    ],
+    idealComp: "Elite Kipchak + Hussar + Trebuchet"
   },
   "Dravidians": {
     opening: "Two-range opening with a mix of Archers and Skirmishers. Best way to use the 200 extra wood and faster-firing Skirms. Add Spears if worried about Scouts.",
@@ -133,7 +147,8 @@ const STRATEGIES = {
       "Two Ranges gets the most value from the 200 starting wood",
       "Faster-firing Skirms are a nice bonus in the mix",
       "Pressure is key — Dravidians want to be aggressive"
-    ]
+    ],
+    idealComp: "Skirmisher + Halberdier/Champion/Urumi Swordsman + Bombard Cannon (+Arbalester if needed)"
   },
   "Ethiopians": {
     opening: "One-range Archers, then wait for Castle Age.",
@@ -142,7 +157,8 @@ const STRATEGIES = {
       "Straightforward Archer civ — Archers into Crossbow",
       "Ethiopian Crossbow is very strong",
       "Can mix in Knights and Siege for a deadly Castle Age push"
-    ]
+    ],
+    idealComp: "Arbalester + Halberdier + Bombard Cannon"
   },
   "Franks": {
     opening: "Scouts. The classic Frank opening.",
@@ -151,7 +167,8 @@ const STRATEGIES = {
       "Scouts into Knights is the best gameplan for Franks",
       "Sometimes you need to mix in Skirmishers against counter units",
       "Keep it simple — Cavalry is what Franks do best"
-    ]
+    ],
+    idealComp: "Paladin spam + Skirmisher/Hand Cannoneer/Throwing Axeman (vs Halberdier) + strong Castle push/Imp with 4+ Relics"
   },
   "Georgians": {
     opening: "Fast up into Scout Rush. Take advantage of healing Scouts aggressively.",
@@ -161,7 +178,8 @@ const STRATEGIES = {
       "Monaspa is the key unit — rush to Castle Age for them",
       "Monaspa currently has no generic counter (may be nerfed in future patches)",
       "Economy + mass Monaspa = win condition"
-    ]
+    ],
+    idealComp: "Coming soon"
   },
   "Goths": {
     opening: "Two Militia drush or Men-at-Arms, taking advantage of the extra hunt bonus. Alternatively, Scouts + Spearmen — cheaper Spears are great in Scout wars.",
@@ -170,7 +188,8 @@ const STRATEGIES = {
       "Infantry openings capitalize on your bonuses",
       "Scouts + Spears is equally good — cheaper Spears shine in Scout mirrors",
       "Extra hunt bonus helps sustain aggressive openings"
-    ]
+    ],
+    idealComp: "Halberdier + Huskarl spam + Bombard Cannon/Trebuchet if needed"
   },
   "Gurjaras": {
     opening: "One-range Archer opening. Don't be tempted by Scouts or Camels in Feudal.",
@@ -179,7 +198,8 @@ const STRATEGIES = {
       "Crossbow + Camel in Castle Age is the target composition",
       "Archers in Feudal set up the Crossbow transition perfectly",
       "Resist the urge to go Scouts/Camels early — Archers are better"
-    ]
+    ],
+    idealComp: "Chakram Thrower + Shrivamsha Rider/Hussar + Bombard Cannon/Trebuchet"
   },
   "Hindustanis": {
     opening: "Scout Rush and stay flexible. Two main follow-ups: switch to Archers for aggressive building pressure, or go into Camels/Light Cav.",
@@ -189,7 +209,8 @@ const STRATEGIES = {
       "Scouts into Archers can win the game in Feudal Age",
       "Scouts into Camels/Light Cav is the safer alternative",
       "Stay flexible and read what your opponent is doing"
-    ]
+    ],
+    idealComp: "1) Hand Cannoneer + Hussar + Bombard Cannon/Trebuchet 2) Imperial Camel + Skirmisher + Bombard Cannon/Trebuchet"
   },
   "Huns": {
     opening: "Scout Rush. Opens the door to all of the best Hun units in Castle Age.",
@@ -199,7 +220,8 @@ const STRATEGIES = {
       "Don't go Archers into CA — being on Range units all game lets opponent counter with Skirms",
       "The mind game of Stable → CA or Stable → Knights is crucial",
       "Wall up after Scouts to keep your opponent guessing"
-    ]
+    ],
+    idealComp: "Heavy Cav Archer + Hussar + Trebuchet"
   },
   "Incas": {
     opening: "Eagle Warrior + Range units. Best combo is Eagles + Skirmishers since you get a discount on food units. Eagles + Spears is also good.",
@@ -209,7 +231,8 @@ const STRATEGIES = {
       "Food unit discount makes Eagles and Spears very cost-effective",
       "Pick your opening based on the matchup",
       "Castle Age flexibility is a major Inca strength"
-    ]
+    ],
+    idealComp: "Kamayuk (vs cav civ)/Elite Eagle (vs archer civ) + Skirmisher + Trebuchet/Siege Ram"
   },
   "Italians": {
     opening: "Scout Rush or one-range Archers. Both are equally good and lead to strong Castle Age units.",
@@ -219,7 +242,8 @@ const STRATEGIES = {
       "Faster Castle Age is your best advantage",
       "Both Scouts and Archers lead to excellent Castle Age options",
       "Italians are more versatile than people think"
-    ]
+    ],
+    idealComp: "Genoese Crossbowman + Hussar + Bombard Cannon"
   },
   "Japanese": {
     opening: "Men-at-Arms into fast Range transition. Japanese have a weaker late game, so try to gain advantages early.",
@@ -229,7 +253,8 @@ const STRATEGIES = {
       "Japanese late game is relatively weak",
       "Ranges in mid-game are the best way to use the civ",
       "Cavalry Archers especially scale well for Japanese"
-    ]
+    ],
+    idealComp: "Halberdier + Arbalester + Yasama Tower + Trebuchet"
   },
   "Khmer": {
     opening: "Scout Rush + full wall. You don't have a Barracks, so you can't make Spearmen against enemy Scouts — walls are essential for defense.",
@@ -239,7 +264,8 @@ const STRATEGIES = {
       "Use houses to stay safe during the Scout Rush",
       "Super-fast Farms give you an insane food economy",
       "Scouts into Knights or continued Scouts are both great"
-    ]
+    ],
+    idealComp: "Hussar spam + Heavy Scorpion/Ballista Elephant/Arbalester + Trebuchet"
   },
   "Koreans": {
     opening: "Spear + Skirmisher or one-range Archers. Don't play Scouts or infantry — they slow you down.",
@@ -249,7 +275,8 @@ const STRATEGIES = {
       "Don't waste time on Scouts or infantry",
       "Scale into the mid-late game with cheap wood units",
       "Towers and Siege complement your strategy well in Castle Age"
-    ]
+    ],
+    idealComp: "Halberdier + Arbalester/War Wagon (if enough res) + Tower + Bombard Cannon/Trebuchet"
   },
   "Lithuanians": {
     opening: "Scouts, or Spear + Skirmisher (even a forward Spear/Skirm rush). All are good openings.",
@@ -259,7 +286,8 @@ const STRATEGIES = {
       "Consider 2 Monasteries to speed up Relic collection",
       "Stay on 1 TC while fighting for Relics, add TCs after",
       "Relics power up your Knights significantly"
-    ]
+    ],
+    idealComp: "Elite Leitis (with Relics) + Skirmisher + Bombard Cannon/Trebuchet"
   },
   "Magyars": {
     opening: "Scout Rush. Cheaper Scouts + free Forging makes this opening insane. Go Scouts in 99% of cases.",
@@ -268,7 +296,8 @@ const STRATEGIES = {
       "Cheaper Scouts + free Forging = best Scout Rush in the game",
       "Almost never deviate from Scouts as your opening",
       "Light Cav/Knights or CA are equally strong Castle Age options"
-    ]
+    ],
+    idealComp: "Heavy Cav Archer + Magyar Hussar + Trebuchet"
   },
   "Malay": {
     opening: "Two Militia Feudal drush. Free infantry armor means Militia only take 2 damage from Villagers, making them obnoxious to deal with. Add Spears too.",
@@ -278,7 +307,8 @@ const STRATEGIES = {
       "Don't go Men-at-Arms — too fragile of a civ for that investment",
       "Sending Spears forward with the drush compounds the free armor value",
       "Avoid Cavalry in Castle Age — focus on Elephants or Range units"
-    ]
+    ],
+    idealComp: "Halberdier + Arbalester + Bombard Cannon"
   },
   "Malians": {
     opening: "One-range Archers. The faster you use gold units, the more you benefit from the gold mining bonus.",
@@ -287,7 +317,8 @@ const STRATEGIES = {
       "Gold unit spam maximizes your gold mining bonus",
       "Don't be tempted by Scouts — Archers get you on gold faster",
       "More gold units = more advantage from the bonus"
-    ]
+    ],
+    idealComp: "Cavalier/Light Cav/Heavy Camel + Gbeto/Hand Cannoneer + Bombard Cannon"
   },
   "Mayans": {
     opening: "Eagles + Archers. Cheaper Archers make this the ideal combo (similar to Aztecs/Incas but with Archers instead of Skirms).",
@@ -297,7 +328,8 @@ const STRATEGIES = {
       "Cheaper Archers give great value",
       "Goal is to boom into Imperial on Plumed Archers/Crossbow",
       "Mayans want to reach Imperial Age"
-    ]
+    ],
+    idealComp: "Halberdier/Elite Eagle + Arbalester/Plumed Archer + Siege Ram/Trebuchet"
   },
   "Mongols": {
     opening: "Scout Rush. Can also try a cheesy Fast Castle into Steppe Lancers (high risk/high reward).",
@@ -307,7 +339,8 @@ const STRATEGIES = {
       "FC Steppe Lancers is a strong cheese option",
       "CA or Mangudai are the backup options",
       "Just open Scouts and you'll have a good time with Mongols"
-    ]
+    ],
+    idealComp: "Mangudai + Hussar + Siege Ram/Onager"
   },
   "Persians": {
     opening: "Scout Rush into Knights, Camels, or Light Cav.",
@@ -316,7 +349,8 @@ const STRATEGIES = {
       "Cavalry units are the way to go — don't bother with CA",
       "Boom toward Savars in the late game",
       "Keep it simple with Stable units"
-    ]
+    ],
+    idealComp: "Paladin (no Elephants) + Crossbowman/Skirmisher + Bombard Cannon/Trebuchet"
   },
   "Poles": {
     opening: "Scout Rush + wall, or Tower Rush. Tower Rush is arguably the best opening if the map supports it. Otherwise, Scout + wall to secure your farms.",
@@ -326,7 +360,8 @@ const STRATEGIES = {
       "Scouts + walls is the safer alternative",
       "Securing 4+ Folwark farms is the key economic strategy",
       "All-in Knights with Szlachta Privileges is the Castle Age play"
-    ]
+    ],
+    idealComp: "1) Winged Hussar + Arbalester + Bombard Cannon/Trebuchet 2) Obuch + Skirmisher + Bombard Cannon/Trebuchet"
   },
   "Portuguese": {
     opening: "One-range Archers. Make as many gold units as possible to take advantage of the gold discount.",
@@ -335,7 +370,8 @@ const STRATEGIES = {
       "Gold units are always the priority — maximize the discount",
       "Can open with a couple Militia for a small discount benefit, but Archers are better",
       "Similar philosophy to Malians — spam gold units"
-    ]
+    ],
+    idealComp: "Arbalester/Organ Gun + Light Cav/Halberdier + Bombard Cannon + Feitoria + Bombard Tower"
   },
   "Romans": {
     opening: "Scout Rush. Men-at-Arms + infantry armor is tempting but overcommits to Feudal Age and is easy to stop with Ranges.",
@@ -344,7 +380,8 @@ const STRATEGIES = {
       "Scout Rush takes better advantage of Roman economy",
       "Infantry opening is overrated — easy to counter",
       "Scouts into infantry transition in Castle Age is the ideal path"
-    ]
+    ],
+    idealComp: "Coming soon"
   },
   "Saracens": {
     opening: "One-range Archers. Don't use infantry. Build a Market and aim for a fast Castle Age.",
@@ -354,7 +391,8 @@ const STRATEGIES = {
       "Siege push with wall-breaking bonus is an alternative win condition",
       "Market helps you reach Castle Age faster",
       "Saracens are very strong right now"
-    ]
+    ],
+    idealComp: "1) Arbalester/Heavy Cav Archer + Light Cav + Bombard Cannon/Trebuchet 2) Heavy Camel + Skirmisher + Bombard Cannon/Trebuchet 3) Mameluke spam (vs cav civ) + Bombard Cannon/Trebuchet"
   },
   "Sicilians": {
     opening: "Fast Castle into Serjeants. Cut Villager production, build a Donjon, and send Serjeants forward to build more Donjons in the enemy base.",
@@ -364,7 +402,8 @@ const STRATEGIES = {
       "Serjeants building Donjons in the enemy base is devastating",
       "The standard Scouts + Spears opening is serviceable but nowhere near as strong",
       "Commit to the cheese — it's the Sicilian strength"
-    ]
+    ],
+    idealComp: "Cavalier (w/UT)/Serjeant + Skirmisher + Trebuchet"
   },
   "Slavs": {
     opening: "Scout Rush. Most flexible opening, and farming bonus means you benefit from early farms.",
@@ -374,7 +413,8 @@ const STRATEGIES = {
       "Only go Ranges for defensive Skirmishers — otherwise stick to Cav or Infantry",
       "Faster Monks + Cavalry is a strong combo",
       "Longswords with free Supplies and Gambesons are surprisingly effective"
-    ]
+    ],
+    idealComp: "Halberdier + Hussar + Siege Onager/Ram"
   },
   "Spanish": {
     opening: "Flexible — Scouts, Spear + Skirm, or even Archers all work. Treat Feudal as a transition period.",
@@ -384,7 +424,8 @@ const STRATEGIES = {
       "Feudal Age is just a bridge to Castle Age Conqs",
       "Secure Stone for a Castle to produce Conqs",
       "Conqs + Missionaries is a terrifying push"
-    ]
+    ],
+    idealComp: "Supremacy Bombard Tower + Halberdier + Hussar"
   },
   "Tatars": {
     opening: "Scout Rush. Transition into Cavalry Archers (free Thumb Ring makes them insane) or Stable units (Steppe Lancers, Camels, Light Cav, Knights).",
@@ -394,7 +435,8 @@ const STRATEGIES = {
       "Stable options are equally viable as a backup",
       "One-range Archers into Thumb Ring Crossbow is the third best option",
       "CA scales much better than Crossbow for Tatars"
-    ]
+    ],
+    idealComp: "1) Heavy Cav Archer + Hussar + Trebuchet 2) Keshik + Skirmisher + Trebuchet"
   },
   "Teutons": {
     opening: "Tower Rush. Free Murder Holes in Castle Age + garrison bonus makes Towers extremely strong. Sets up forward pressure without relying on mobility.",
@@ -404,7 +446,8 @@ const STRATEGIES = {
       "Free Murder Holes is a huge Castle Age power spike for towers",
       "If you don't tower rush, Archers are better than Scouts (no Husbandry)",
       "Cheaper Farms + Archer opening develops your base smoothly"
-    ]
+    ],
+    idealComp: "Halberdier + Monk + Siege Onager/Bombard Cannon/Trebuchet"
   },
   "Turks": {
     opening: "Scouts (play like Huns — into CA, Light Cav, Knight, or Camel), or one-range Archers (play like Saracens — into Archer + Camel or Archer + Light Cav).",
@@ -414,7 +457,8 @@ const STRATEGIES = {
       "Gold mining bonus supports either approach",
       "Generic units and strategies are better than rushing to gunpowder",
       "Save gunpowder for when the situation specifically calls for it"
-    ]
+    ],
+    idealComp: "Heavy Cav Archer + Hussar + Bombard Cannon"
   },
   "Vietnamese": {
     opening: "Scouts into Skirmishers, or Spear + Skirm, or Scouts into Cavalry Archers. Not straight Archers despite being an Archer civ.",
@@ -424,7 +468,8 @@ const STRATEGIES = {
       "Scouts into Skirms or Scouts into CA are both better",
       "Straight Archers leaves you stuck on Crossbow with no Camel support",
       "Extra HP CA in Castle Age is very strong"
-    ]
+    ],
+    idealComp: "Rattan Archer + Halberdier + Bombard Cannon"
   },
   "Vikings": {
     opening: "Two Militia Feudal drush. Extra HP on infantry + early pressure lets you seed farms behind it. Play a passive Feudal after the drush.",
@@ -434,7 +479,8 @@ const STRATEGIES = {
       "Free Wheelbarrow and Hand Cart give a massive economic edge",
       "Goal is to reach Imperial Age faster than your opponent",
       "Vikings' late game is weak — win with the early Imperial timing"
-    ]
+    ],
+    idealComp: "Skirmisher + Berserker + Siege Ram/Trebuchet"
   }
 };
 
@@ -469,6 +515,17 @@ function renderStrategy(civName) {
       <h4>Key Tips</h4>
       <ul>${strat.keyTips.map(t => `<li>${t}</li>`).join('')}</ul>
     </div>`;
+  }
+
+  if (strat.idealComp) {
+    html += `<div class="strategy-block">
+      <h4>Ideal Composition</h4>`;
+    if (strat.idealComp === "Coming soon") {
+      html += `<p class="no-strategy">${strat.idealComp}</p>`;
+    } else {
+      html += `<p>${strat.idealComp}</p>`;
+    }
+    html += `</div>`;
   }
 
   html += '</div>';
