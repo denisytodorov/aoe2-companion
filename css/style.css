@@ -56,6 +56,7 @@ header {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .civ-selector {
@@ -428,6 +429,60 @@ main {
 }
 .header-btn:hover {
   background: var(--accent);
+}
+
+/* === Civ Grid === */
+.civgrid-header {
+  margin-bottom: 1.2rem;
+}
+
+.civgrid-header h2 {
+  color: var(--text-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.civgrid-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.civ-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.8rem;
+}
+
+.civ-grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.civ-grid-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--text-heading);
+  transform: translateY(-2px);
+}
+
+.civ-grid-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.civ-grid-name {
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 600;
 }
 
 /* === Build Orders Page === */

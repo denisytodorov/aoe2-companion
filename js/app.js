@@ -117,6 +117,52 @@ function showBuildOrders() {
   renderBuildOrdersPage();
 }
 
+// === Civ Grid ===
+function renderCivGrid() {
+  const civNames = Object.keys(App.techtrees).sort();
+
+  let html = `
+    <div class="civgrid-header">
+      <h2>Choose a Civilization</h2>
+      <p class="civgrid-subtitle">Select a civilization to view bonuses, strategy guide, and tech tree</p>
+    </div>
+    <div class="civ-grid">
+  `;
+
+  for (const name of civNames) {
+    const iconFile = name.toLowerCase() + '.png';
+    html += `
+      <div class="civ-grid-card" data-civ="${name}">
+        <img class="civ-grid-icon" src="data/Icons/${iconFile}" alt="${name}" loading="lazy">
+        <span class="civ-grid-name">${name}</span>
+      </div>
+    `;
+  }
+
+  html += '</div>';
+
+  document.getElementById('civ-info').innerHTML = html;
+  document.getElementById('civ-strategy').innerHTML = '';
+  document.getElementById('view-techtree-btn').style.display = 'none';
+
+  // Attach click handlers
+  document.querySelectorAll('.civ-grid-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const civ = card.dataset.civ;
+      App.currentCiv = civ;
+      document.getElementById('civ-dropdown').value = civ;
+      showCivPage(civ);
+    });
+  });
+}
+
+function showHome() {
+  App.currentCiv = null;
+  document.getElementById('civ-dropdown').value = '';
+  showView('civ-page');
+  renderCivGrid();
+}
+
 // === Init ===
 function init() {
   document.getElementById('civ-info').innerHTML = '<div class="loading">Loading game data...</div>';
@@ -124,8 +170,8 @@ function init() {
   loadData();
   populateDropdown();
 
-  document.getElementById('civ-info').innerHTML =
-    '<div class="loading">Select a civilization from the dropdown above</div>';
+  // Show civ grid as default home screen
+  renderCivGrid();
 
   // View Tech Tree button
   document.getElementById('view-techtree-btn').addEventListener('click', () => {
@@ -140,6 +186,16 @@ function init() {
   // Build Orders button
   document.getElementById('build-orders-btn').addEventListener('click', () => {
     showBuildOrders();
+  });
+
+  // Home button
+  document.getElementById('home-btn').addEventListener('click', () => {
+    showHome();
+  });
+
+  // Logo click = Home
+  document.querySelector('.logo').addEventListener('click', () => {
+    showHome();
   });
 }
 
