@@ -485,7 +485,7 @@ const STRATEGIES = {
 
 // === Rendering ===
 function renderStrategy(civName) {
-  const container = document.getElementById('strategy-container');
+  const container = document.getElementById('civ-strategy');
   if (!container) return;
 
   const strat = STRATEGIES[civName];
