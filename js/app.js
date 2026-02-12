@@ -125,6 +125,7 @@ function renderCivGrid() {
     <div class="civgrid-header">
       <h2>Choose a Civilization</h2>
       <p class="civgrid-subtitle">Select a civilization to view bonuses, strategy guide, and tech tree</p>
+      <input type="text" id="civ-search" class="civ-search" placeholder="Search civilizations..." autocomplete="off">
     </div>
     <div class="civ-grid">
   `;
@@ -154,6 +155,17 @@ function renderCivGrid() {
       showCivPage(civ);
     });
   });
+
+  // Search filter
+  const searchInput = document.getElementById('civ-search');
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    document.querySelectorAll('.civ-grid-card').forEach(card => {
+      const name = card.dataset.civ.toLowerCase();
+      card.style.display = name.includes(query) ? '' : 'none';
+    });
+  });
+  searchInput.focus();
 }
 
 function showHome() {

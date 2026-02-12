@@ -447,6 +447,29 @@ main {
   font-size: 0.9rem;
 }
 
+.civ-search {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.civ-search::placeholder {
+  color: var(--text-secondary);
+}
+
+.civ-search:focus {
+  outline: 2px solid var(--text-heading);
+  outline-offset: 1px;
+}
+
 .civ-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
