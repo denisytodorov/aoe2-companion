@@ -636,60 +636,6 @@ main {
 }
 
 /* Resource Distribution */
-.bo-resource-section {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.8rem 1rem;
-  margin-bottom: 1rem;
-}
-
-.bo-resource-row {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.3rem 0;
-  flex-wrap: wrap;
-}
-
-.bo-resource-label {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  min-width: 120px;
-}
-
-.bo-resource-chips {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.bo-res-chip {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.bo-res-food {
-  background: rgba(231, 76, 60, 0.15);
-  color: var(--food);
-  border: 1px solid rgba(231, 76, 60, 0.3);
-}
-
-.bo-res-wood {
-  background: rgba(160, 82, 45, 0.15);
-  color: var(--wood);
-  border: 1px solid rgba(160, 82, 45, 0.3);
-}
-
-.bo-res-gold {
-  background: rgba(241, 196, 15, 0.15);
-  color: var(--gold);
-  border: 1px solid rgba(241, 196, 15, 0.3);
-}
-
 /* Steps Section */
 .bo-steps-section {
   background: var(--bg-secondary);
@@ -718,10 +664,11 @@ main {
 
 .bo-step {
   display: grid;
-  grid-template-columns: 3.5rem 4rem 1fr;
+  grid-template-columns: 3.5rem 4rem 1fr auto;
   gap: 0.5rem;
   padding: 0.4rem 0.6rem;
   border-radius: 3px;
+  align-items: center;
   align-items: baseline;
 }
 
@@ -736,7 +683,7 @@ main {
 }
 
 .bo-step-helper {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr auto;
   padding-left: 8.5rem;
   color: var(--text-secondary);
   font-style: italic;
@@ -774,6 +721,27 @@ main {
 .bo-step-task {
   font-size: 0.88rem;
   line-height: 1.4;
+}
+
+.bo-step-resources {
+  display: inline-flex;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.bo-step-res {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.78rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  color: var(--text-secondary);
+}
+
+.bo-res-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 /* Benchmarks */
