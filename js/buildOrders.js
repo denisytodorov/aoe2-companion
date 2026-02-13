@@ -8,34 +8,22 @@ const BUILD_ORDERS = [
     popCount: "21",
     clickUpTime: "~8:30",
     steps: [
-      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep" },
+      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with your 3 starting villagers (2/1)" },
-      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)" },
-      { pop: "11",   age: "dark",   task: "Lure 1st boar" },
+      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)", food: 6, wood: 4, gold: 0 },
+      { pop: "11",   age: "dark",   task: "Lure 1st boar", food: 7, wood: 4, gold: 0 },
       { type: "helper", task: "Build House" },
-      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)" },
-      { pop: "14",   age: "dark",   task: "Lure 2nd boar" },
-      { pop: "15-16", age: "dark",  task: "2 more villagers to berries (4 total on berries)" },
-      { type: "helper", task: "Build House" },
+      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)", food: 9, wood: 4, gold: 0 },
+      { pop: "14",   age: "dark",   task: "Lure 2nd boar", food: 10, wood: 4, gold: 0 },
+      { pop: "15-16", age: "dark",  task: "2 more villagers to berries (4 total on berries)", food: 12, wood: 4, gold: 0 },
+      { type: "helper", task: "Build House", food: 12, wood: 8, gold: 0 },
       { pop: "17-20", age: "dark",  task: "4 villagers to wood (2nd Lumber Camp or join 1st)" },
       { pop: "21",   age: "dark",   task: "Click Feudal Age", isBenchmark: true },
-      { type: "helper", task: "While advancing: move 4 shepherd villagers to wood; Build Barracks " },
-      { pop: null,   age: "feudal", task: "Build Stable immediately, research Double-Bit Axe" },
-      { pop: null,   age: "feudal", task: "Produce 3-5 Scouts, take map control" },
+      { type: "helper", task: "While advancing: move 4 shepherd villagers to wood; Build Barracks", food: 8, wood: 12, gold: 0 },
+      { pop: null,   age: "feudal", task: "Build Stable immediately, research Double-Bit Axe", food: 8, wood: 12, gold: 0 },
+      { pop: null,   age: "feudal", task: "Produce 3-5 Scouts, take map control", food: 8, wood: 12, gold: 0 },
       { pop: null,   age: "feudal", task: "Start building farms as berries run out (~8 farms)" },
     ],
-    vilDistribution: {
-      label: "At Feudal click",
-      food: 6, foodNote: "berries",
-      wood: 10, woodNote: "",
-      gold: 0, goldNote: "",
-    },
-    vilRebalanced: {
-      label: "After rebalancing",
-      food: 11, foodNote: "farms",
-      wood: 10, woodNote: "",
-      gold: 0, goldNote: "",
-    },
     benchmarks: [
       "Feudal at 21 pop (~8:30)",
       "Stable down immediately on reaching Feudal",
@@ -51,36 +39,24 @@ const BUILD_ORDERS = [
     popCount: "22",
     clickUpTime: "~9:00",
     steps: [
-      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep" },
-      { type: "helper", task: "Build 2 Houses with 2 of your starting villagers" },
-      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)" },
-      { pop: "11",   age: "dark",   task: "Lure 1st boar" },
+      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
+      { type: "helper", task: "Build 2 Houses with 2 of your starting villagers", food: 6, wood: 0, gold: 0 },
+      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)", food: 6, wood: 4, gold: 0 },
+      { pop: "11",   age: "dark",   task: "Lure 1st boar", food: 7, wood: 4, gold: 0 },
       { type: "helper", task: "Build House" },
-      { pop: "12",   age: "dark",   task: "1 villager to berries (build Mill)" },
-      { pop: "13",   age: "dark",   task: "Lure 2nd boar" },
-      { pop: "14-16", age: "dark",  task: "3 more villagers to berries (4 total on berries)" },
+      { pop: "12",   age: "dark",   task: "1 villager to berries (build Mill)", food: 8, wood: 4, gold: 0 },
+      { pop: "13",   age: "dark",   task: "Lure 2nd boar", food: 9, wood: 4, gold: 0 },
+      { pop: "14-16", age: "dark",  task: "3 more villagers to berries (4 total on berries)", food: 13, wood: 4, gold: 0 },
       { type: "helper", task: "Build House" },
-      { pop: "17",   age: "dark",   task: "1 villager to wood (5 on wood total)" },
-      { pop: "18-21", age: "dark",  task: "4 villagers to gold (build Mining Camp)" },
+      { pop: "17",   age: "dark",   task: "1 villager to wood (5 on wood total)", food: 13, wood: 5, gold: 0 },
+      { pop: "18-21", age: "dark",  task: "4 villagers to gold (build Mining Camp)", food: 13, wood: 5, gold: 4 },
       { pop: "22",   age: "dark",   task: "Click Feudal Age", isBenchmark: true },
       { type: "helper", task: "While advancing: move shepherd villagers to wood (need ~10 on wood)" },
-      { pop: null,   age: "feudal", task: "Build Archery Range + 2nd Lumber Camp, research Double-Bit Axe" },
-      { pop: null,   age: "feudal", task: "Produce Archers non-stop, research Fletching when affordable" },
-      { pop: null,   age: "feudal", task: "Start seeding farms as natural food runs out" },
-      { pop: null,   age: "feudal", task: "Build 2nd Archery Range when wood allows" },
+      { pop: null,   age: "feudal", task: "Build Archery Range + 2nd Lumber Camp, research Double-Bit Axe", food: 8, wood: 10, gold: 4 },
+      { pop: null,   age: "feudal", task: "Produce Archers non-stop, research Fletching when affordable", food: 8, wood: 10, gold: 4 },
+      { pop: null,   age: "feudal", task: "Start seeding farms as natural food runs out", food: 8, wood: 10, gold: 4 },
+      { pop: null,   age: "feudal", task: "Build 2nd Archery Range when wood allows", food: 8, wood: 10, gold: 4 },
     ],
-    vilDistribution: {
-      label: "At Feudal click",
-      food: 4, foodNote: "berries",
-      wood: 5, woodNote: "",
-      gold: 4, goldNote: "",
-    },
-    vilRebalanced: {
-      label: "After rebalancing",
-      food: 7, foodNote: "mix",
-      wood: 10, woodNote: "",
-      gold: 3, goldNote: "",
-    },
     benchmarks: [
       "Feudal at 22 pop (~9:00)",
       "Archery Range down immediately on reaching Feudal",
@@ -97,37 +73,25 @@ const BUILD_ORDERS = [
     popCount: "22",
     clickUpTime: "~9:30",
     steps: [
-      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep" },
+      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with 2 of your starting villagers" },
-      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)" },
-      { pop: "11",   age: "dark",   task: "Lure 1st boar" },
+      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)", food: 6, wood: 4, gold: 0 },
+      { pop: "11",   age: "dark",   task: "Lure 1st boar", food: 7, wood: 4, gold: 0 },
       { type: "helper", task: "Build House" },
-      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)" },
-      { pop: "14",   age: "dark",   task: "Lure 2nd boar" },
-      { pop: "15-16", age: "dark",  task: "2 more villagers to berries (4 total on berries)" },
-      { pop: "17",   age: "dark",   task: "Build Barracks with a shepherd, then send to wood" },
+      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)", food: 9, wood: 4, gold: 0 },
+      { pop: "14",   age: "dark",   task: "Lure 2nd boar", food: 10, wood: 4, gold: 0 },
+      { pop: "15-16", age: "dark",  task: "2 more villagers to berries (4 total on berries)", food: 12, wood: 4, gold: 0 },
+      { pop: "17",   age: "dark",   task: "Build Barracks with a shepherd, then send to wood", food: 11, wood: 5, gold: 0 },
       { type: "helper", task: "Build House" },
-      { pop: "18-19", age: "dark",  task: "2 villagers to gold (build Mining Camp)" },
+      { pop: "18-19", age: "dark",  task: "2 villagers to gold (build Mining Camp)", food: 11, wood: 5, gold: 2 },
       { type: "helper", task: "Queue 3 Militia from Barracks" },
-      { pop: "20-21", age: "dark",  task: "2 villagers to wood" },
+      { pop: "20-21", age: "dark",  task: "2 villagers to wood", food: 11, wood: 7, gold: 2 },
       { pop: "22",   age: "dark",   task: "Click Feudal Age", isBenchmark: true },
       { type: "helper", task: "While advancing: move shepherd villagers to wood, rally Militia toward enemy" },
-      { pop: null,   age: "feudal", task: "Research Men-at-Arms immediately, send Militia forward" },
+      { pop: null,   age: "feudal", task: "Research Men-at-Arms immediately, send Militia forward", food: 5, wood: 13, gold: 2 },
       { pop: null,   age: "feudal", task: "Build Archery Range, start Archer production" },
-      { pop: null,   age: "feudal", task: "Seed farms as natural food runs out" },
+      { pop: null,   age: "feudal", task: "Seed farms as natural food runs out", food: 8, wood: 11, gold: 2 },
     ],
-    vilDistribution: {
-      label: "At Feudal click",
-      food: 4, foodNote: "berries",
-      wood: 7, woodNote: "",
-      gold: 2, goldNote: "",
-    },
-    vilRebalanced: {
-      label: "After rebalancing",
-      food: 7, foodNote: "mix",
-      wood: 10, woodNote: "",
-      gold: 3, goldNote: "",
-    },
     benchmarks: [
       "Barracks down by ~7:00",
       "3 Militia produced before clicking Feudal",
@@ -144,37 +108,25 @@ const BUILD_ORDERS = [
     popCount: "24-25",
     clickUpTime: "~10:00",
     steps: [
-      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep" },
+      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with 2 of your starting villagers" },
-      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)" },
-      { pop: "11",   age: "dark",   task: "Lure 1st boar" },
+      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)", food: 6, wood: 4, gold: 0 },
+      { pop: "11",   age: "dark",   task: "Lure 1st boar", food: 7, wood: 4, gold: 0 },
       { type: "helper", task: "Build House" },
-      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)" },
-      { pop: "14",   age: "dark",   task: "Lure 2nd boar" },
-      { pop: "15-16", age: "dark",  task: "2 more villagers to berries (4 total on berries)" },
-      { pop: "17",   age: "dark",   task: "Build Barracks with a shepherd, then send to gold" },
+      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)", food: 9, wood: 4, gold: 0 },
+      { pop: "14",   age: "dark",   task: "Lure 2nd boar", food: 10, wood: 4, gold: 0 },
+      { pop: "15-16", age: "dark",  task: "2 more villagers to berries (4 total on berries)", food: 12, wood: 4, gold: 0 },
+      { pop: "17",   age: "dark",   task: "Build Barracks with a shepherd, then send to gold", food: 11, wood: 4, gold: 1 },
       { type: "helper", task: "Build House" },
-      { pop: "18-19", age: "dark",  task: "2 villagers to gold (build Mining Camp)" },
+      { pop: "18-19", age: "dark",  task: "2 villagers to gold (build Mining Camp)", food: 11, wood: 4, gold: 3 },
       { type: "helper", task: "Produce 3 Militia and send them to enemy base" },
-      { pop: "20-21", age: "dark",  task: "2 villagers to farms (seed farms as sheep/boar deplete)" },
-      { pop: "22-23", age: "dark",  task: "2 villagers to wood" },
-      { pop: "24-25", age: "dark",  task: "2 villagers to food (farms or berries)" },
+      { pop: "20-21", age: "dark",  task: "2 villagers to farms (seed farms as sheep/boar deplete)", food: 13, wood: 4, gold: 3 },
+      { pop: "22-23", age: "dark",  task: "2 villagers to wood", food: 13, wood: 6, gold: 3 },
+      { pop: "24-25", age: "dark",  task: "2 villagers to food (farms or berries)", food: 15, wood: 6, gold: 3 },
       { pop: "25",   age: "dark",   task: "Click Feudal Age", isBenchmark: true },
-      { type: "helper", task: "While advancing: balance eco, wall up at home" },
+      { type: "helper", task: "While advancing: balance eco, wall up at home", food: 10, wood: 11, gold: 3 },
       { pop: null,   age: "feudal", task: "Flexible: Archery Range for Archers, or continue to Castle Age" },
     ],
-    vilDistribution: {
-      label: "At Feudal click",
-      food: 10, foodNote: "farms + berries",
-      wood: 8, woodNote: "",
-      gold: 2, goldNote: "",
-    },
-    vilRebalanced: {
-      label: "After rebalancing",
-      food: 10, foodNote: "sheep",
-      wood: 10, woodNote: "",
-      gold: 5, goldNote: "",
-    },
     benchmarks: [
       "Barracks down by ~6:30",
       "3 Militia out by ~8:00",
@@ -225,18 +177,20 @@ function renderBuildOrdersPage() {
   });
 }
 
-function renderResourceChips(dist) {
-  let chips = '';
-  if (dist.food > 0) {
-    chips += `<span class="bo-res-chip bo-res-food">${dist.food} Food${dist.foodNote ? ' (' + dist.foodNote + ')' : ''}</span>`;
-  }
-  if (dist.wood > 0) {
-    chips += `<span class="bo-res-chip bo-res-wood">${dist.wood} Wood${dist.woodNote ? ' (' + dist.woodNote + ')' : ''}</span>`;
-  }
-  if (dist.gold > 0) {
-    chips += `<span class="bo-res-chip bo-res-gold">${dist.gold} Gold${dist.goldNote ? ' (' + dist.goldNote + ')' : ''}</span>`;
-  }
-  return chips;
+function renderStepResources(step) {
+  const hasFood = step.food !== undefined;
+  const hasWood = step.wood !== undefined;
+  const hasGold = step.gold !== undefined;
+  const hasStone = step.stone !== undefined && step.stone > 0;
+  if (!hasFood && !hasWood && !hasGold && !hasStone) return '';
+
+  let html = '<span class="bo-step-resources">';
+  if (hasFood) html += `<span class="bo-step-res"><img src="data/Icons/Food.png" class="bo-res-icon" alt="F">${step.food}</span>`;
+  if (hasWood) html += `<span class="bo-step-res"><img src="data/Icons/Wood.png" class="bo-res-icon" alt="W">${step.wood}</span>`;
+  if (hasGold) html += `<span class="bo-step-res"><img src="data/Icons/Gold.png" class="bo-res-icon" alt="G">${step.gold}</span>`;
+  if (hasStone) html += `<span class="bo-step-res"><img src="data/Icons/Stone.png" class="bo-res-icon" alt="S">${step.stone}</span>`;
+  html += '</span>';
+  return html;
 }
 
 function renderBuildOrderDetail(id) {
@@ -248,11 +202,12 @@ function renderBuildOrderDetail(id) {
   // Steps
   let stepsHtml = '';
   for (const step of bo.steps) {
+    const resHtml = renderStepResources(step);
     if (step.type === 'helper') {
       stepsHtml += `
         <div class="bo-step bo-step-helper">
-          <span class="bo-step-pop"></span>
           <span class="bo-step-task">${step.task}</span>
+          ${resHtml}
         </div>`;
     } else if (step.isBenchmark) {
       stepsHtml += `
@@ -260,6 +215,7 @@ function renderBuildOrderDetail(id) {
           <span class="bo-step-pop">${step.pop || ''}</span>
           <span class="bo-step-age bo-age-${step.age}">${step.age}</span>
           <span class="bo-step-task">${step.task}</span>
+          ${resHtml}
         </div>`;
     } else {
       stepsHtml += `
@@ -267,6 +223,7 @@ function renderBuildOrderDetail(id) {
           <span class="bo-step-pop">${step.pop || ''}</span>
           <span class="bo-step-age bo-age-${step.age}">${step.age}</span>
           <span class="bo-step-task">${step.task}</span>
+          ${resHtml}
         </div>`;
     }
   }
@@ -291,21 +248,6 @@ function renderBuildOrderDetail(id) {
         <span class="bo-card-stat">${bo.popCount} pop</span>
         <span class="bo-card-stat-sep"></span>
         <span class="bo-card-stat">Feudal ${bo.clickUpTime}</span>
-      </div>
-
-      <div class="bo-resource-section">
-        <div class="bo-resource-row">
-          <span class="bo-resource-label">${bo.vilDistribution.label}:</span>
-          <div class="bo-resource-chips">
-            ${renderResourceChips(bo.vilDistribution)}
-          </div>
-        </div>
-        <div class="bo-resource-row">
-          <span class="bo-resource-label">${bo.vilRebalanced.label}:</span>
-          <div class="bo-resource-chips">
-            ${renderResourceChips(bo.vilRebalanced)}
-          </div>
-        </div>
       </div>
 
       <div class="bo-steps-section">
