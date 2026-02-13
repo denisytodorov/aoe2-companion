@@ -481,6 +481,61 @@ const STRATEGIES = {
     ],
     idealComp: "Skirmisher + Berserker + Siege Ram/Trebuchet",
   },
+  "Jurchens": {
+    opening: "Scouts or Drush. Leverage starting foraging bushes bonus to get a fast uptime.",
+    castleAge: "Stable transition. 2-3 Stable Knights or Steppe Lancers. Mix in Heavy Rocket Carts if massing unique units.",
+    keyTips: [
+      "Your forage bushes last longer; use this for a safer, faster Dark Age.",
+      "Unique Unit (Iron Pagoda) is incredibly tanky but expensive; don't rush it in 1v1.",
+      "Heavy Rocket Carts explode on death; use them to dive enemy archer masses.",
+      "Lacks Knights, so you rely on Steppe Lancers or heavy unique cav.",
+    ],
+    idealComp: "Iron Pagoda + Elite Skirm + Bombard Cannon",
+  },
+  "Khitans": {
+    opening: "Scouts into Archers. Or straight Archers. Use faster training trash to swarm.",
+    castleAge: "Heavy Cavalry Archer switch. You get the heavy upgrade in Castle Age (huge power spike).",
+    keyTips: [
+      "Hit the Castle Age power spike: Heavy Cav Archer upgrade is available one age early.",
+      "Trash units train 50% faster; flood the map with Hussars/Skirms in late game.",
+      "Don't fight early Castle Age Knights directly without massed CA.",
+      "Utilize mobility; never take a fair fight with your CA mass.",
+    ],
+    idealComp: "Heavy Cavalry Archer + Hussar + Siege Ram",
+  },
+  "Shu": {
+    opening: "Archers. +2 Line of Sight helps you spot resources and incoming raids early.",
+    castleAge: "Crossbows + White Feather Guards. Use the guards to slow engaging cavalry.",
+    keyTips: [
+      "White Feather Guards apply a slow effect; micro them to kite indefinitely.",
+      "Team bonus gives foot archers +2 LOS; huge for map awareness.",
+      "Farming economy is standard, so rely on your military efficiency.",
+      "War Chariots (siege) are excellent for shredding massed infantry.",
+    ],
+    idealComp: "White Feather Guard or Halberdier + Arbalest + Trebuchet",
+  },
+  "Wei": {
+    opening: "Standard Scouts. Use cheaper farms to smooth out the economy.",
+    castleAge: "Knights or Tiger Cavalry. If you can afford a Castle, start feeding Tiger Cavs kills.",
+    keyTips: [
+      "Tiger Cavalry gain stats from kills; feed them stray villagers or weak units.",
+      "Farms are cheaper (-33%), allowing for a very smooth food economy.",
+      "Traction Trebuchets are cheaper and faster; great for aggressive castle pushes.",
+      "Protect your Tiger Cav aggressively; a snowballed stack is game-winning.",
+    ],
+    idealComp: "Tiger Cavalry + Elite Skirmisher + Trebuchet",
+  },
+  "Wu": {
+    opening: "Archer Rush. Leverage wood savings or fishing bonuses if on hybrid maps.",
+    castleAge: "Crossbows + Fire Archers. Fire Archers melt buildings and trade well vs skirms.",
+    keyTips: [
+      "Fire Archers deal 'fire' damage which ignores some pierce armor; great vs buildings.",
+      "Strong naval civ; always contest water with their unique tech upgrades.",
+      "Infantry is strong; Halbs are essential to protect your delicate archer mass.",
+      "Don't rely on cavalry; their stable is very weak compared to other 3K civs.",
+    ],
+    idealComp: "Fire Archer + Halberdier + Siege Ram/Trebuchet",
+  },
 };
 
 // === Rendering ===
