@@ -7,6 +7,7 @@ const BUILD_ORDERS = [
     difficulty: "beginner",
     popCount: "21",
     clickUpTime: "~8:30",
+    clickUpLabel: "Feudal",
     steps: [
       { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with your 3 starting villagers (2/1)" },
@@ -38,6 +39,7 @@ const BUILD_ORDERS = [
     difficulty: "beginner",
     popCount: "22",
     clickUpTime: "~9:00",
+    clickUpLabel: "Feudal",
     steps: [
       { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with 2 of your starting villagers", food: 6, wood: 0, gold: 0 },
@@ -72,6 +74,7 @@ const BUILD_ORDERS = [
     difficulty: "intermediate",
     popCount: "22",
     clickUpTime: "~9:30",
+    clickUpLabel: "Feudal",
     steps: [
       { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with 2 of your starting villagers" },
@@ -107,6 +110,7 @@ const BUILD_ORDERS = [
     difficulty: "intermediate",
     popCount: "24-25",
     clickUpTime: "~10:00",
+    clickUpLabel: "Feudal",
     steps: [
       { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
       { type: "helper", task: "Build 2 Houses with 2 of your starting villagers" },
@@ -135,6 +139,43 @@ const BUILD_ORDERS = [
     ],
     followUp: "Drush is the most flexible opening. Go Fast Castle, go Archers, or wall and boom — the Militia buy you time. Keep farming up.",
   },
+  {
+    id: "fast-castle-knights",
+    name: "Fast Castle -> Knights",
+    summary: "Get to Castle Age quickly and send Knights towards the opponent. Effective way to devastate an opponent's Feudal/Castle economy. Sometimes game-ending.",
+    difficulty: "intermediate",
+    popCount: "29",
+    clickUpTime: "~14:30",
+    clickUpLabel: "Castle",
+    steps: [
+      { pop: "1-6",  age: "dark",   task: "6 villagers to sheep", food: 6, wood: 0, gold: 0 },
+      { type: "helper", task: "Build 2 Houses with your 3 starting villagers (2/1)" },
+      { pop: "7-10", age: "dark",   task: "4 villagers to wood (build Lumber Camp)", food: 6, wood: 4, gold: 0 },
+      { pop: "11",   age: "dark",   task: "Lure 1st boar", food: 7, wood: 4, gold: 0 },
+      { type: "helper", task: "Build House" },
+      { pop: "12-13", age: "dark",  task: "2 villagers to berries (build Mill)", food: 9, wood: 4, gold: 0 },
+      { pop: "14",   age: "dark",   task: "Lure 2nd boar", food: 10, wood: 4, gold: 0 },
+      { pop: "15-17", age: "dark",  task: "3 more villagers to berries (5 total on berries)", food: 12, wood: 5, gold: 0 },
+      { type: "helper", task: "Build House", food: 12, wood: 9, gold: 0 },
+      { pop: "18-24", age: "dark",  task: "4 villagers to wood (2nd Lumber Camp or join 1st)", food: 12, wood: 12, gold: 0 },
+      { pop: "25-27", age: "dark",  task: "3 villagers to Gold (Build Mining Camp)", food: 12, wood: 12, gold: 3 },
+      { type: "helper", task: "Start moving people to Farms when sheep deplete" },
+      { pop: "27",   age: "feudal", task: "Click Feudal Age", isBenchmark: true, food: 12, wood: 12, gold: 3 },
+      { type: "helper", task: "Build Barracks, queue 2 villagers" },
+      { pop: "27",   age: "feudal", task: "Build Stable", food: 12, wood: 12, gold: 3 },
+      { pop: "28-29", age: "feudal", task: "2 more villagers to Gold", food: 12, wood: 12, gold: 5 },
+      { pop: "29",   age: "feudal", task: "Move 2 villagers from Berries to Farms", food: 12, wood: 12, gold: 5 },
+      { pop: "29",   age: "feudal", task: "Click up to Castle Age", isBenchmark: true, food: 12, wood: 12, gold: 5 },
+      { pop: null,   age: "castle", task: "Start producing Knights. Raid at 3 knights.", food: 12, wood: 12, gold: 5 },
+    ],
+    benchmarks: [
+      "TBD",
+      "TBD",
+      "TBD",
+      "TBD",
+    ],
+    followUp: "If opponent has no answer or walls, push for a second stable and more knights. If opponent responds well, go into a boom.",
+  },
 ];
 
 // === Rendering ===
@@ -160,7 +201,7 @@ function renderBuildOrdersPage() {
         <div class="bo-card-stats">
           <span class="bo-card-stat">${bo.popCount} pop</span>
           <span class="bo-card-stat-sep"></span>
-          <span class="bo-card-stat">Feudal ${bo.clickUpTime}</span>
+          <span class="bo-card-stat">${bo.clickUpLabel || 'Feudal'} ${bo.clickUpTime}</span>
         </div>
       </div>
     `;
@@ -247,7 +288,7 @@ function renderBuildOrderDetail(id) {
       <div class="bo-detail-meta">
         <span class="bo-card-stat">${bo.popCount} pop</span>
         <span class="bo-card-stat-sep"></span>
-        <span class="bo-card-stat">Feudal ${bo.clickUpTime}</span>
+        <span class="bo-card-stat">${bo.clickUpLabel || 'Feudal'} ${bo.clickUpTime}</span>
       </div>
 
       <div class="bo-steps-section">
