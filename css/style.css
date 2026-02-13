@@ -793,3 +793,160 @@ main {
   padding: 3rem;
   font-size: 1.1rem;
 }
+
+/* === Responsive: Tablet === */
+@media (max-width: 768px) {
+  header {
+    padding: 0.6rem 1rem;
+  }
+
+  .header-nav {
+    gap: 0.6rem;
+  }
+
+  #civ-dropdown {
+    min-width: 140px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .techtree-ages {
+    min-width: 500px;
+  }
+
+  .tt-node {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .techtree-age-col {
+    padding: 0.3rem;
+  }
+
+  .bo-step-helper {
+    padding-left: 7.5rem;
+  }
+
+  .tooltip {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+/* === Responsive: Phone === */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .civ-selector label {
+    display: none;
+  }
+
+  #civ-dropdown {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  .civ-name {
+    font-size: 1.4rem;
+  }
+
+  .info-section {
+    padding: 0.8rem;
+  }
+
+  /* Tech Tree */
+  .techtree-ages {
+    min-width: 0;
+  }
+
+  #techtree-container {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .techtree-section-header {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .techtree-age-header {
+    font-size: 0.65rem;
+  }
+
+  .tt-node {
+    padding: 0.2rem 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .techtree-age-col {
+    padding: 0.25rem;
+    gap: 0.2rem;
+  }
+
+  /* Build Orders */
+  .bo-step {
+    grid-template-columns: 2.5rem 3rem 1fr auto;
+    gap: 0.3rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .bo-step-helper {
+    padding-left: 5.5rem;
+  }
+
+  .bo-step-pop {
+    font-size: 0.78rem;
+  }
+
+  .bo-step-age {
+    font-size: 0.65rem;
+  }
+
+  .bo-step-task {
+    font-size: 0.82rem;
+  }
+
+  .bo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tooltip */
+  .tooltip {
+    max-width: calc(100vw - 1.5rem);
+    padding: 0.6rem;
+  }
+
+  .tooltip-name {
+    font-size: 0.85rem;
+  }
+
+  /* Civ Grid */
+  .civ-grid {
+    gap: 0.5rem;
+  }
+
+  .civ-grid-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .civ-grid-name {
+    font-size: 0.78rem;
+  }
+}
